@@ -1,4 +1,4 @@
-# T-ESA
+# TESA
 
 This is a short descritpion of how to use the T-ESA (Twitter-Easy Sentiment Analysis)
 package for conducting some sentiment analysis using a lexicon based approach.
