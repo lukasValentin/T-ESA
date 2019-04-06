@@ -1,4 +1,5 @@
 # T-ESA
+<<<<<<< HEAD
 This is a short descritpion of how to use the T-ESA (Twitter-Easy Sentiment Analysis)
 package for conducting some sentiment analysis using a lexicon based approach.
 
@@ -26,3 +27,6 @@ Minqing Hu and Bing Liu. "Mining and Summarizing Customer Reviews."
        and Comparing Opinions on the Web." Proceedings of the 14th 
        International World Wide Web conference (WWW-2005), May 10-14, 
        2005, Chiba, Japan.
+=======
+Twitter-Easy Sentiment Analysis
+>>>>>>> b95fc32a6847cd65140649f93ac196a2eb8cab13
