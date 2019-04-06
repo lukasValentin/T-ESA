@@ -1,5 +1,5 @@
 # T-ESA
-<<<<<<< HEAD
+
 This is a short descritpion of how to use the T-ESA (Twitter-Easy Sentiment Analysis)
 package for conducting some sentiment analysis using a lexicon based approach.
 
@@ -17,7 +17,7 @@ package) to ensure better matching betweens the words in the tweets and the lexi
 
 As almost mentioned you will have to install the nltk Python package as well.
 
-** References
+** References **
 Minqing Hu and Bing Liu. "Mining and Summarizing Customer Reviews." 
        Proceedings of the ACM SIGKDD International Conference on Knowledge 
        Discovery and Data Mining (KDD-2004), Aug 22-25, 2004, Seattle, 
