@@ -2,3 +2,6 @@
 *.spyproject
 # igonre pyc files
 *.pyc
+# ignore egg-info
+*.egg
+*.egg-info/

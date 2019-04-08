@@ -15,6 +15,8 @@ setuptools.setup(
     url="https://github.com/lukasValentin/T-ESA",
     packages=setuptools.find_packages(
             "nltk"),
+    include_package_data=True,
+    package_data={'TESA': ['/TESA/lexicon/*.txt']},
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

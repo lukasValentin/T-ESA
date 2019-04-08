@@ -5,7 +5,9 @@ Created on Thu Feb 28 08:37:44 2019
 @author: Lukas Graf, Z_GIS
 
 """
-from preprocessing import clean, handle_negations, lemmanize, stem
+from TESA.preprocessing import clean, handle_negations, lemmanize, stem
+import pkg_resources
+import os
 
 
 class lexicon_analysis:
@@ -16,7 +18,14 @@ class lexicon_analysis:
     # class constructor -> empty list for the lexicon
     # and the path to the two text files containing the lexicon
     # per default the Hu and Liu lexicon is loaded
-    def __init__(self, file_pos="positive.txt", file_neg="negative.txt"):
+    def __init__(self, file_pos=None, file_neg=None):
+	
+        if (file_pos is None and file_neg is None):
+
+            DATA_PATH = pkg_resources.resource_filename('TESA', '/lexicon/')
+            file_pos = DATA_PATH + 'positive.txt'
+            file_neg = DATA_PATH + 'negative.txt'
+
 
         self.pos, self.neg = [], []
         self.file_pos = file_pos
@@ -25,7 +34,7 @@ class lexicon_analysis:
 
     # now we can assess the Sentiment of the Tweet by using
     # therefore we have to load the Hu and Liu lexicon
-    def load_lexicon(self, ):
+    def load_lexicon(self):
         """
         loads the Liu and Wang sentiment lexicon
         (or any other user-defined lexicon)
@@ -109,7 +118,6 @@ class lexicon_analysis:
 
     	# calculate the sentiment score based on the opinion lexicon by Hu and Liu
     	# therefore, the find_token_matches method of this class is used
-    	self.load_lexicon()
     	scores = self.find_token_matches(tweet_tokens)
     	# negation handling
     	scores_token = handle_negations(tweet_tokens, scores)
