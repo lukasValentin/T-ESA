@@ -13,9 +13,25 @@ The package works on single tweets that are expected to be provided as string va
 It is capable of:
 
 - cleaning the tweet (stop word and special character removal using a given list)
-- using the Porter-Stemmer or a lemmanization routine (both taken from the nltk
-package) to ensure better matching betweens the words in the tweets and the lexicon
+
+- using the Porter-Stemmer or a lemmanization routine (both taken from the nltk package) to ensure better matching betweens the words in the tweets and the lexicon
+
 - simple negation handling
+
+**How to install it:**
+
+run this statement on your command line:
+
+pip install -i https://test.pypi.org/simple/ TESA
+
+or if you want to build from source:
+
+- download the project
+
+- navigate to the folder containing the setup.py
+
+- run pip3 install . (or pip3 install -e . to give access to all users of your local machine)
+
 
 **How to use it:**
 
