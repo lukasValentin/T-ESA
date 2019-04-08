@@ -7,6 +7,8 @@ Per **Default** the Hu and Liu lexicon is used (Hu & Liu, 2004; Liu et al., 2005
 However, users can also provide other lexicons as text-files (one for positive words
 and one for negative ones).
 
+Please see the provided example for more details.
+
 The package works on single tweets that are expected to be provided as string variable.
 It is capable of:
 
@@ -15,9 +17,14 @@ It is capable of:
 package) to ensure better matching betweens the words in the tweets and the lexicon
 - simple negation handling
 
+**How to use it:**
+
+Some example Python code can be found in the /example directory of the Python package
+that shows the usage of the API
+
 As almost mentioned you will have to install the nltk Python package as well.
 
-** References **
+**References**
 
 Minqing Hu and Bing Liu. "Mining and Summarizing Customer Reviews." 
        Proceedings of the ACM SIGKDD International Conference on Knowledge 

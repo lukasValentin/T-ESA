@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 import setuptools
+import pathlib
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
+HERE = pathlib.Path(__file__).parent
+README = (HERE / "README.md").read_text()
+
 
 setuptools.setup(
     name="TESA",
@@ -10,7 +12,7 @@ setuptools.setup(
     author="Lukas Graf",
     author_email="graflukas@web.de",
     description="Simple sentiment analysis of single tweets using opinion lexicons",
-    long_description=long_description,
+    long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/lukasValentin/T-ESA",
     packages=setuptools.find_packages(
