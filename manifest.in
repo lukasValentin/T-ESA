@@ -1,2 +1,2 @@
-include TESA/*.txt
+include lexicon/*.txt
 include README.md
