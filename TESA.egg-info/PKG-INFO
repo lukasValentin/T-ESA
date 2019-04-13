@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: TESA
-Version: 0.0.1
+Version: 0.0.2
 Summary: Simple sentiment analysis of single tweets using opinion lexicons
 Home-page: https://github.com/lukasValentin/T-ESA
 Author: Lukas Graf
@@ -25,6 +25,21 @@ Description: # TESA
         - using the Porter-Stemmer or a lemmanization routine (both taken from the nltk package) to ensure better matching betweens the words in the tweets and the lexicon
         
         - simple negation handling
+        
+        **How to install it:**
+        
+        run this statement on your command line:
+        
+        pip install -i https://test.pypi.org/simple/ TESA
+        
+        or if you want to build from source:
+        
+        - download the project
+        
+        - navigate to the folder containing the setup.py
+        
+        - run pip3 install . (or pip3 install -e . to give access to all users of your local machine)
+        
         
         **How to use it:**
         

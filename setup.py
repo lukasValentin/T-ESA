@@ -8,7 +8,7 @@ README = (HERE / "README.md").read_text()
 
 setuptools.setup(
     name="TESA",
-    version="0.0.1",
+    version="0.0.2",
     author="Lukas Graf",
     author_email="graflukas@web.de",
     description="Simple sentiment analysis of single tweets using opinion lexicons",
