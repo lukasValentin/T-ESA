@@ -116,7 +116,7 @@ def handle_negations(tweet_tokens, lexicon_scores):
         token = tweet_tokens[index]
         if (token in negations_adverbs or token in negations_verbs):
             # makle sure that the end of the tweet isn't reached yet
-            if (index < len(tweet_tokens)):
+            if (index < len(tweet_tokens)-1):
                 # if the sentiment of the next token is positive change it to negative
                 if (lexicon_scores[index + 1] == 1):
                     new_scores[index + 1] = -1
