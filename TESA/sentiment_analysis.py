@@ -4,10 +4,19 @@ Created on Thu Feb 28 08:37:44 2019
 
 @author: Lukas Graf, Z_GIS
 
+@content: contains a class "lexicon_analysis" for conduction basic sentiment
+analysis of - for instance - tweets in English language using the Hu and Liu
+opinion lexicon. Based on the identified polarity of the message, a sentiment
+score is calculated that is translated into "negative" if the score is smaller
+equal -2 and "positive" if the score is greater equal +2. Scores between that
+limits are marked as "neutral".
+
+@returns: sentiment ('negative', 'neutral', 'positive') and sentiment score
+as integer (thus, you can also modify the bounds for the sentiment categories)
+
 """
 from TESA.preprocessing import clean, handle_negations, lemmanize, stem
 import pkg_resources
-import os
 
 
 class lexicon_analysis:
@@ -125,9 +134,9 @@ class lexicon_analysis:
     	pos, neg = self.get_overall_scores(scores_token)
     	# calculate the difference between the number of positive and negative words
     	sentiment_score = pos - neg
+
     	# bounds for assigning a sentiment as positive or negative or neutral
     	# based on the paper by Kovacs-Gyori et al. 2018
-
     	bound_positive = 2
     	bound_negative = -2
 
