@@ -56,12 +56,7 @@ def clean(tweet, language="english"):
     # also check the spelling
     tmp = ""
     tmp_c = [tmp + item for item in tweet.split() if item not in stop_words and item.isalpha() and len(item) >= 2]
-    
-    tmp_c = str(tmp_c)
-    tmp_c = tmp_c.replace("[", "")
-    tmp_c = tmp_c.replace("]", "")
-    tmp_c = tmp_c.replace("'", "")
-    tmp_c = tmp_c.replace(",", "")
+    tmp_c = ",".join(item for item in tmp_c)
     
     # remove other  special characters including @, URLs, Usernames and other special characters
     return ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t]) M^|(\w+:\/\/\S+)", " ", tmp_c).split())
