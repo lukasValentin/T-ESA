@@ -1,17 +1,24 @@
 # -*- coding: utf-8 -*-
 """
-    @name:    preprocessing.py
-
-    @author:  Lukas Graf
+Preprocessing
+=============
+   
+@author:  Lukas Graf, April-June 2019
     
-    @purpose: preprocesses tweets for sentiment analysis
-              this includes:
-                  * stop word removal
-                  * special character removal
-                  * lemmatization and stemming
-                  * negation handling
-              the program works on single tweets and returns
-              a list of tweet tokens
+This Python module preprocesses tweets for sentiment analysis
+including:
+
+  - stop word removal
+  - special character removal
+  - lemmatization and stemming (using nltk)
+  - negation handling
+
+The program works on single tweets and returns a list of cleaned
+tweet tokens. Works on English tweets only.
+
+Module Functions
+================
+
 """
 import re
 from nltk.stem import PorterStemmer
@@ -20,10 +27,20 @@ from nltk.stem import WordNetLemmatizer
 
 # simple data cleaning
 # -> stop-word, special character removal
-def clean(tweet, language="english"): 
+def clean(tweet): 
     """
     clean tweet text by removing links, special characters 
-    using simple regex statements 
+    using simple regex statements
+	
+    Parameters
+    ----------
+    tweet : String
+	Single Twitter message
+
+    Returns
+    -------
+    tokenized_tweet : List
+	List of cleaned tokens derived from the input Twitter message
     """
     # convert to lower
     tweet = tweet.lower()
@@ -56,7 +73,7 @@ def clean(tweet, language="english"):
     # also check the spelling
     tmp = ""
     tmp_c = [tmp + item for item in tweet.split() if item not in stop_words and item.isalpha() and len(item) >= 2]
-    tmp_c = ",".join(item for item in tmp_c)
+    tmp_c = " ".join(item for item in tmp_c)
     
     # remove other  special characters including @, URLs, Usernames and other special characters
     return ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t]) M^|(\w+:\/\/\S+)", " ", tmp_c).split())
@@ -66,7 +83,17 @@ def clean(tweet, language="english"):
 # =============================================================================
 def stem(token):
      """
-     stems a tweet using the PorterStemmer algorithm
+     stems a tweet using the PorterStemmer algorithm (nltk library)
+     
+     Parameters
+     ----------
+     token : String
+	Single token of a Twitter message
+
+     Returns
+     -------
+     token_stemed : String
+     	stemmed token using the Porter-Stemmer
      """
      porter = PorterStemmer()
      token_stemed = [porter.stem(word) for word in token.split()]
@@ -78,7 +105,17 @@ def stem(token):
 # lemmanization
 def lemmanize(token):
      """
-     finds the lemmans of words in a tweet
+     finds the lemmans of words in a tweet (nltk library)
+
+     Parameters
+     ----------
+     token : String
+	Single token of a Twitter message
+
+     Returns
+     -------
+     token_lemmanized : String
+     	lemmanized token
      """
      lemmanizer = WordNetLemmatizer()
      token_lemmanized = lemmanizer.lemmatize(token)
@@ -91,7 +128,19 @@ def lemmanize(token):
 def handle_negations(tweet_tokens, lexicon_scores):
     """
     Handling of negations occuring in tweets -> shifts meaning of words
-    -> if a negation was found the polarity of the three following words will change
+    -> if a negation was found the polarity of the following words will change
+	
+    Parameters
+    ----------
+    tweet_tokens : List
+	list of tweet tokens that were already prepocessed (cleaning, etc.)
+    lexicon_scores : List
+        list of assigned sentiment scores per token (decoded as Integers)
+
+    Returns
+    -------
+    new_scores : List
+	list of sentiment scores (as Integers) after negiation handling
     """
     # new score list
     new_scores = lexicon_scores

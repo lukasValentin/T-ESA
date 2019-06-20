@@ -1,18 +1,22 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Feb 28 08:37:44 2019
+Sentiment_Analysis
+==================
 
-@author: Lukas Graf, Z_GIS
+@author: Lukas Graf, February-June 2019
 
-@content: contains a class "lexicon_analysis" for conduction basic sentiment
-analysis of - for instance - tweets in English language using the Hu and Liu
+This module contains a class "lexicon_analysis" for conducting basic sentiment
+analysis of tweets in English language using the Hu and Liu
 opinion lexicon. Based on the identified polarity of the message, a sentiment
 score is calculated that is translated into "negative" if the score is smaller
 equal -2 and "positive" if the score is greater equal +2. Scores between that
 limits are marked as "neutral".
 
-@returns: sentiment ('negative', 'neutral', 'positive') and sentiment score
-as integer (thus, you can also modify the bounds for the sentiment categories)
+The results are: 
+
+- sentiment ('negative', 'neutral', 'positive')
+
+- sentiment score as integer (thus, you can also modify the bounds for the sentiment categories)
 
 """
 from TESA.preprocessing import clean, handle_negations, lemmanize, stem
@@ -21,20 +25,20 @@ import pkg_resources
 
 class lexicon_analysis:
     """
-    Class for analysing the sentiment of tweets
+    Class for analysing the sentiment of tweets using an Opinion lexicon
     """
 
     # class constructor -> empty list for the lexicon
     # and the path to the two text files containing the lexicon
     # per default the Hu and Liu lexicon is loaded
     def __init__(self, file_pos=None, file_neg=None):
-	
+        """
+        the class constructor
+        """
         if (file_pos is None and file_neg is None):
-
             DATA_PATH = pkg_resources.resource_filename('TESA', '/lexicon/')
             file_pos = DATA_PATH + 'positive.txt'
             file_neg = DATA_PATH + 'negative.txt'
-
 
         self.pos, self.neg = [], []
         self.file_pos = file_pos
@@ -48,8 +52,16 @@ class lexicon_analysis:
         loads the Liu and Wang sentiment lexicon
         (or any other user-defined lexicon)
         and returns two lists
-        """
 
+	Parameters
+	----------
+	None
+
+	Returns
+	-------
+	pos, neg : String
+		loaded opinion lexicon
+        """
         # read in the data
         with open(self.file_pos) as positives:
             self.pos = positives.readlines()
@@ -69,8 +81,18 @@ class lexicon_analysis:
         in a given tweet and returns a list of assigned scores
         +1 means that a token is positive, -1 that a token is 
         negative, 0 that the token was not found in the lexicon
-        """
 
+	Parameters
+	----------
+	tweet_tokens : List
+		list of preprocessed Tweet tokens (cleaning, etc.)
+
+	Returns
+	-------
+	scores : List
+		list of scores (sentiment values) derived from matches
+		between the tokenized tweets and the opinion lexicon
+        """
         scores = []
         token_pos = 1
         token_neg = -1
@@ -95,8 +117,17 @@ class lexicon_analysis:
     def get_overall_scores(self, token_scores):
         """
         returns the number of positive and negative scores in a tweet
-        """
 
+	Parameters
+	----------
+	token_scores : List
+		list of sentiment scores for a tokenized tweet
+
+	Returns
+	-------
+	num_pos, num_neg : Integer
+		number of positive and negative sentiment scores per tokenized tweet
+        """
         num_pos = token_scores.count(1)
         num_neg = token_scores.count(-1)
         return num_pos, num_neg
