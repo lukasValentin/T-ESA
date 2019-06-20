@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from TESA import sentiment_analysis
 
 # load the class and create an object
