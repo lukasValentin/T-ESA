@@ -66,18 +66,26 @@ def clean(tweet):
                   'both', 'each', 'few', 'more', 'most', 'other', 'some', 'such',
                   'only', 'own', 'same', 'so', 'than', 'too', 'very', 's', 't',
                   'will', 'just',  'should', "should've", 'now', 'd', 'll',
-                  'm', 'o', 're', 've', 'y', 'ain', 'ma', '.', ',', ';', '!', '?']
+                  'm', 'o', 're', 've', 'y', 'ain', 'ma', '.', ',', ';', '!', '?',
+                  '@...', '@', '@…']
     
     # convert to string again as re expects a string-like object (and not a list)
-    # remove all the stopwords as well as the numbers and words shorter than two letters
-    # also check the spelling
+    # remove all the stopwords as well as the numbers and words shorter than 
+    # two letters also check the spelling
     tmp = ""
-    tmp_c = [tmp + item for item in tweet.split() if item not in stop_words and item.isalpha() and len(item) >= 2]
+    tmp_c = [tmp +
+             item.replace(",","").replace(";","").replace("?","").replace("!","").replace("#","")
+             for item in tweet.split() if item not in stop_words
+             and not item.isdigit()]
     tmp_c = " ".join(item for item in tmp_c)
     
-    # remove other  special characters including @, URLs, Usernames and other special characters
-    return ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t]) M^|(\w+:\/\/\S+)", " ", tmp_c).split())
+    # remove other  special characters including @, URLs, Usernames and other 
+    # special characters
+    return ' '.join(re.sub("(@[A-Za-z0-9]+)| M^|(\w+:\/\/\S+)",
+                           " ",
+                           tmp_c).split())
 # end clean
+
 
 # word stemming
 # =============================================================================

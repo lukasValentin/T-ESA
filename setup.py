@@ -11,14 +11,14 @@ setuptools.setup(
     version="0.0.2",
     author="Lukas Graf",
     author_email="graflukas@web.de",
-    description="Simple sentiment analysis of single tweets using opinion lexicons",
+    description="Simple sentiment analysis of single tweets using opinion and emoji lexicons",
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/lukasValentin/T-ESA",
     packages=setuptools.find_packages(
-            "nltk"),
+            "nltk", "emoji"),
     include_package_data=True,
-    package_data={'TESA': ['/TESA/lexicon/*.txt']},
+    package_data={'TESA': ['/TESA/lexicon/opinions/*.txt', '/TESA/lexicon/emojis/*.csv']},
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

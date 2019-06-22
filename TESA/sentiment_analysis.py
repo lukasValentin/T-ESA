@@ -21,7 +21,12 @@ The results are:
 """
 from TESA.preprocessing import clean, handle_negations, lemmanize, stem
 import pkg_resources
-
+import pandas as pd
+import codecs
+from itertools import chain
+import emoji
+import functools
+import operator
 
 class lexicon_analysis:
     """
@@ -31,45 +36,84 @@ class lexicon_analysis:
     # class constructor -> empty list for the lexicon
     # and the path to the two text files containing the lexicon
     # per default the Hu and Liu lexicon is loaded
-    def __init__(self, file_pos=None, file_neg=None):
+    def __init__(self, file_pos=None, file_neg=None,
+                 emojis_pos=None, emojis_neg=None):
         """
         the class constructor
         """
         if (file_pos is None and file_neg is None):
-            DATA_PATH = pkg_resources.resource_filename('TESA', '/lexicon/')
+            # path to the opinion lexicon
+            DATA_PATH = pkg_resources.resource_filename('TESA',
+                                                        '/lexicon/opinions/')
             file_pos = DATA_PATH + 'positive.txt'
             file_neg = DATA_PATH + 'negative.txt'
+            # path to the emoji lexicon
+            DATA_PATH = pkg_resources.resource_filename('TESA',
+                                                        '/lexicon/emojis/')
+            file_e_pos = DATA_PATH + 'positive_emojis.csv'
+            file_e_neg = DATA_PATH + 'negative_emojis.csv'
+            
 
         self.pos, self.neg = [], []
         self.file_pos = file_pos
         self.file_neg = file_neg
+        self.file_e_pos = file_e_pos
+        self.file_e_neg = file_e_neg
 
 
-    # now we can assess the Sentiment of the Tweet by using
-    # therefore we have to load the Hu and Liu lexicon
     def load_lexicon(self):
         """
-        loads the Liu and Wang sentiment lexicon
+        loads the Liu and Wang sentiment lexicon as well as the emoji-lexicon
         (or any other user-defined lexicon)
-        and returns two lists
+        and return two lists containing the opionion lexicon derived
+        words as well as the emojis
 
-	Parameters
-	----------
-	None
+    	 Parameters
+        -------
+        None
 
-	Returns
-	-------
-	pos, neg : String
-		loaded opinion lexicon
+    	 Returns
+        -------
+        pos, neg : String
+    		 loaded opinion lexicon
         """
         # read in the data
+        # opionion lexicon first
         with open(self.file_pos) as positives:
             self.pos = positives.readlines()
             self.pos = [item.replace("\n","") for item in self.pos]
         with open(self.file_neg) as negatives:
             self.neg = negatives.readlines()
             self.neg = [item.replace("\n","") for item in self.neg]
+        # read in the emojis (utf-8 representation)
+        # use read_emoji_lexicon method and append to the opionion lexicon
+        self.pos = list(chain(self.pos,
+                              self.read_emoji_lexicon(self.file_e_pos)))
+        self.neg = list(chain(self.neg,
+                              self.read_emoji_lexicon(self.file_e_neg)))      
     # end load_lexicon
+
+
+    @staticmethod
+    def read_emoji_lexicon(fname):
+        """
+        reads in the emoji lexicon stored as csv files and extracts the
+        utf-8 representation of the emojis
+        
+        Parameters
+        ----------
+        fname : String
+            filename (path + filename) of emoji-lexicon as csv
+        
+        Returns
+        -------
+        emojis : List-like
+            emojis as UTF-8 representation
+        """
+        df = pd.read_csv(fname, sep=";")
+        # convert from utf-8 hex to utf-8
+        df['emoji'] = df['utf_8'].apply(lambda x: codecs.decode(x, "hex").decode('utf-8'))
+        return df['emoji'].to_list()
 
 
     # setup a method for counting the matches between a given tweet
@@ -82,21 +126,33 @@ class lexicon_analysis:
         +1 means that a token is positive, -1 that a token is 
         negative, 0 that the token was not found in the lexicon
 
-	Parameters
-	----------
-	tweet_tokens : List
-		list of preprocessed Tweet tokens (cleaning, etc.)
+	    Parameters
+	    ----------
+	    tweet_tokens : List
+		     list of preprocessed Tweet tokens (cleaning, etc.)
 
-	Returns
-	-------
-	scores : List
-		list of scores (sentiment values) derived from matches
-		between the tokenized tweets and the opinion lexicon
+	    Returns
+	    -------
+	    scores : List
+		    list of scores (sentiment values) derived from matches
+		    between the tokenized tweets and the opinion lexicon
         """
         scores = []
         token_pos = 1
         token_neg = -1
         token_neutral = 0
+        
+        # sometimes one token holds more than one emoji -> these need
+        # to split too by using the emoji Python library
+        tmp = []
+        for ii in range(len(tweet_tokens)):
+            token = tweet_tokens[ii]
+            if emoji.emoji_count(token) <= 1:
+                tmp.append(token)
+                continue
+            emoji_tokens = self.split_mutliple_emojis(token)
+            tmp = list(chain(tmp, emoji_tokens))
+        
 
         # loop over the tokens in a tweet and assign the sentiment
         # depending on the match to the lexicon -> it is necessary to
@@ -112,21 +168,33 @@ class lexicon_analysis:
         # endfor
         return scores
     # end find_token_matches
+    
+    
+    @staticmethod
+    def split_mutliple_emojis(emoji_token):
+        """
+        splits a token containing multiple tokens into
+        single emojis
+        """
+        splitted = emoji.get_emoji_regexp().split(emoji_token)
+        splitted = [sub.split() for sub in splitted]
+        return functools.reduce(operator.concat, splitted)
 
 
-    def get_overall_scores(self, token_scores):
+    @staticmethod
+    def get_overall_scores(token_scores):
         """
         returns the number of positive and negative scores in a tweet
 
-	Parameters
-	----------
-	token_scores : List
-		list of sentiment scores for a tokenized tweet
+	    Parameters
+	    ----------
+	    token_scores : List
+		     list of sentiment scores for a tokenized tweet
 
-	Returns
-	-------
-	num_pos, num_neg : Integer
-		number of positive and negative sentiment scores per tokenized tweet
+	    Returns
+	    -------
+	    num_pos, num_neg : Integer
+		      number of positive and negative sentiment scores per tokenized tweet
         """
         num_pos = token_scores.count(1)
         num_neg = token_scores.count(-1)

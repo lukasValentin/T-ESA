@@ -1,0 +1,6 @@
+# to run the R-Skript please open a terminal in the directory containing the
+# preprocess_emoji_lexicon.R script and run:
+Rscript preprocess_emoji_lexicon.R
+# Note: R must be installed on your machine
+# if not installed so far, install the "lexicon" package by running R and typing in
+R> install.packages("lexicon")

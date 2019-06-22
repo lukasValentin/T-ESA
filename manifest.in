@@ -1,2 +1,3 @@
-include lexicon/*.txt
+include lexicon/opinions/*.txt
+include lexicon/emojis/*.csv
 include README.md

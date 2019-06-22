@@ -1,0 +1,98 @@
+;byte;name;id;sentiment;polarity;category;frequency;negative;neutral;positive;utf_8
+18;<f0><9f><98><90>;neutral face;lexicondtidodwvhvxzpqjmvvss;-0,392592592592593;negative;smileys & people;270;150;76;44;f09f9890
+19;<f0><9f><98><91>;expressionless face;lexiconrhthcqkjtyzjjcpmtinb;-0,31438127090301;negative;smileys & people;299;154;85;60;f09f9891
+20;<f0><9f><98><b6>;face without mouth;lexiconokvvgkcnbfjrbrctdqdx;-0,145299145299145;negative;smileys & people;117;50;34;33;f09f98b6
+22;<f0><9f><98><a3>;persevering face;lexiconoqxwiyazqrccteibihdx;-0,214022140221402;negative;smileys & people;271;147;35;89;f09f98a3
+26;<f0><9f><98><aa>;sleepy face;lexiconwzvhboecgxwugidydpeq;-0,0809128630705394;negative;smileys & people;482;208;105;169;f09f98aa
+27;<f0><9f><98><ab>;tired face;lexiconrzrzapnpvzuyouatnajz;-0,145610278372591;negative;smileys & people;467;227;81;159;f09f98ab
+28;<f0><9f><98><b4>;sleeping face;lexiconkejliapszkyngfiittzs;-0,0807799442896936;negative;smileys & people;718;303;170;245;f09f98b4
+33;<f0><9f><98><92>;unamused face;lexiconwivnupleicqgksianinp;-0,374729241877256;negative;smileys & people;1385;819;266;300;f09f9892
+34;<f0><9f><98><93>;downcast face with sweat;lexiconrxtrafgolujjmdnhpjsm;-0,0805860805860806;negative;smileys & people;273;118;59;96;f09f9893
+35;<f0><9f><98><94>;pensive face;lexiconxjpiijtegwyqgxqtzadl;-0,146058091286307;negative;smileys & people;1205;559;263;383;f09f9894
+36;<f0><9f><98><95>;confused face;lexiconeoxebfwozyrlxawstqzs;-0,4;negative;smileys & people;340;205;66;69;f09f9895
+37;<f0><9f><98><b2>;astonished face;lexiconwftzcecsecbuuwfuzbil;-0,0697674418604651;negative;smileys & people;129;50;38;41;f09f98b2
+38;<e2><98><b9>;frowning face;lexiconmarkjdimpozzqmhtbmrj;-0,6;negative;smileys & people;20;14;4;2;e298b9
+39;<f0><9f><98><96>;confounded face;lexiconhnjstwhzbhddgehazyla;-0,156716417910448;negative;smileys & people;268;130;50;88;f09f9896
+40;<f0><9f><98><9e>;disappointed face;lexicongeinqudhnnnsvyzlhexv;-0,118421052631579;negative;smileys & people;532;255;85;192;f09f989e
+42;<f0><9f><98><a4>;face with steam from nose;lexiconlxmdibyazcaraojkqeco;-0,211009174311927;negative;smileys & people;327;157;82;88;f09f98a4
+44;<f0><9f><98><ad>;loudly crying face;lexiconlevtnyuxjbmsvqcyeoms;-0,0933767643865364;negative;smileys & people;5526;2412;1218;1896;f09f98ad
+45;<f0><9f><98><a6>;frowning face with open mouth;lexiconynfvvopemqeerixknsct;-0,388888888888889;negative;smileys & people;54;30;15;9;f09f98a6
+46;<f0><9f><98><a7>;anguished face;lexiconwmbgazgokgiljumtvejb;-0,0652173913043478;negative;smileys & people;92;36;26;30;f09f98a7
+47;<f0><9f><98><a8>;fearful face;lexiconglyhmlwwmfbtzifywymg;-0,141263940520446;negative;smileys & people;269;117;73;79;f09f98a8
+48;<f0><9f><98><a9>;weary face;lexiconhdavvdkxckxxlzvqazxc;-0,368362831858407;negative;smileys & people;1808;1069;336;403;f09f98a9
+50;<f0><9f><98><b0>;anxious face with sweat;lexiconvhjxxrngachiwvkrelfz;-0,0198675496688742;negative;smileys & people;302;132;44;126;f09f98b0
+54;<f0><9f><98><a1>;pouting face;lexiconxrmzgzbexjwbutajcici;-0,173280423280423;negative;smileys & people;756;403;81;272;f09f98a1
+55;<f0><9f><98><a0>;angry face;lexicondjewhgworxdquqafhjci;-0,302083333333333;negative;smileys & people;288;163;49;76;f09f98a0
+56;<f0><9f><98><b7>;face with medical mask;lexiconjbgvavudqimtvfkpvxai;-0,170731707317073;negative;smileys & people;246;117;54;75;f09f98b7
+59;<f0><9f><91><bf>;angry face with horns;lexicondeiibakyhhtagohzvslf;-0,557142857142857;negative;smileys & people;70;47;15;8;f09f91bf
+61;<f0><9f><91><ba>;goblin;lexiconemmncsqcxscgkabdsuig;-0,210526315789474;negative;smileys & people;19;8;7;4;f09f91ba
+62;<f0><9f><92><80>;skull;lexiconbezprfgfecbzsjezthmf;-0,208333333333333;negative;smileys & people;456;214;123;119;f09f9280
+63;<e2><98><a0>;skull and crossbones;lexiconliobgbmdhkznmdfxkhof;-0,037037037037037;negative;smileys & people;27;7;14;6;e298a0
+67;<f0><9f><92><a9>;pile of poo;lexiconkmnzjsqyprzpjkwugonz;-0,117903930131004;negative;smileys & people;229;94;68;67;f09f92a9
+75;<f0><9f><98><bf>;crying cat face;lexiconjehejotpxuwitrwfokry;-0,380597014925373;negative;smileys & people;134;78;29;27;f09f98bf
+76;<f0><9f><98><be>;pouting cat face;lexiconavrcwdbwjhhgqrwdizzt;-0,363636363636364;negative;smileys & people;33;20;5;8;f09f98be
+87;<f0><9f><91><ae>;police officer;lexiconcvydnwxqqsujwxmslbte;-0,4;negative;smileys & people;20;10;8;2;f09f91ae
+88;<f0><9f><92><82>;guard;lexiconsqixrtfxpskbmritlfbu;-0,176470588235294;negative;smileys & people;17;8;4;5;f09f9282
+97;<f0><9f><99><8d>;person frowning;lexiconngjizvbatrcmjcnfqmuj;-0,346938775510204;negative;smileys & people;49;29;8;12;f09f998d
+98;<f0><9f><99><8e>;person pouting;lexiconsrxthuoxhsflbrgahbgl;-0,0588235294117647;negative;smileys & people;17;8;2;7;f09f998e
+99;<f0><9f><99><85>;person gesturing NO;lexiconsthhrgtqimforcfsplun;-0,206060606060606;negative;smileys & people;165;76;47;42;f09f9985
+106;<f0><9f><9a><b6>;person walking;lexiconwknnasgueiicggptyzbx;-0,148648648648649;negative;smileys & people;74;28;29;17;f09f9ab6
+113;<f0><9f><8f><87>;horse racing;lexiconkzdizcybpxcffzhaulzw;-0,142857142857143;negative;smileys & people;7;3;2;2;f09f8f87
+121;<f0><9f><91><ac>;two men holding hands;lexiconytaenmqmotiwrcxvaytn;-0,0609756097560976;negative;smileys & people;82;29;29;24;f09f91ac
+125;<f0><9f><91><aa>;family;lexiconuuaswjxfyydwchiwsuif;-0,0175438596491228;negative;smileys & people;57;24;10;23;f09f91aa
+136;<f0><9f><91><8e>;thumbs down;lexiconhpjatpptkxybafvllqxw;-0,189922480620155;negative;smileys & people;258;128;51;79;f09f918e
+142;<f0><9f><91><90>;open hands;lexicontfojddohktgjgyzmiwlc;-0,0240963855421687;negative;smileys & people;83;33;19;31;f09f9190
+146;<f0><9f><91><82>;ear;lexiconuaddskklngskdwwyqkfs;-0,157894736842105;negative;smileys & people;19;7;8;4;f09f9182
+156;<f0><9f><92><94>;broken heart;lexiconxvjudvgtxgykbwviekdo;-0,121951219512195;negative;smileys & people;328;136;96;96;f09f9294
+224;<f0><9f><90><91>;ewe;lexiconmoomnnwhcwysbiyffrol;-0,19047619047619;negative;animals & nature;21;6;13;2;f09f9091
+230;<f0><9f><90><81>;mouse;lexiconxoihedxbmgkfedtypyor;-0,4;negative;animals & nature;5;2;3;0;f09f9081
+246;<f0><9f><90><b8>;frog face;lexiconblihcjpsajjwfnoubete;-0,0833333333333333;negative;animals & nature;72;24;30;18;f09f90b8
+250;<f0><9f><90><b2>;dragon face;lexiconzzbkclonxbjkwaoyfrkk;-0,0625;negative;animals & nature;16;2;13;1;f09f90b2
+284;<f0><9f><8d><88>;melon;lexicontjuxpnzspnbpejfrkhnt;-0,444444444444444;negative;food & drink;9;6;1;2;f09f8d88
+309;<f0><9f><8d><b1>;bento box;lexiconnucizejulegjislzayzv;-0,333333333333333;negative;food & drink;45;25;10;10;f09f8db1
+317;<f0><9f><8d><a2>;oden;lexiconilhqoprzbxwhuajfrzjb;-0,133333333333333;negative;food & drink;15;5;7;3;f09f8da2
+318;<f0><9f><8d><a3>;sushi;lexiconbsvwrlrkudtofigdyxfx;-0,245283018867925;negative;food & drink;53;24;18;11;f09f8da3
+320;<f0><9f><8d><a5>;fish cake with swirl;lexiconxfeuyvaraqezdrhjnngo;-0,655172413793103;negative;food & drink;29;22;4;3;f09f8da5
+321;<f0><9f><8d><a1>;dango;lexiconhcoqejsewwshcwmzmekx;-0,0555555555555556;negative;food & drink;18;5;9;4;f09f8da1
+332;<f0><9f><8d><ae>;custard;lexiconfpxnvawutnkxtyhliwgr;-0,136363636363636;negative;food & drink;22;10;5;7;f09f8dae
+361;<f0><9f><8f><ab>;school;lexicontaynmfvlduodomehbbjp;-0,3;negative;travel & places;10;6;1;3;f09f8fab
+387;<f0><9f><8e><b0>;slot machine;lexiconelnmazdeqaugdxwwprls;-1;negative;travel & places;1;1;0;0;f09f8eb0
+402;<f0><9f><9a><92>;fire engine;lexiconqtintfwodxcnndanlfqh;-0,333333333333333;negative;travel & places;3;1;2;0;f09f9a92
+406;<f0><9f><9a><96>;oncoming taxi;lexiconujdiguxnkrknjnyhvjkc;-0,111111111111111;negative;travel & places;9;3;4;2;f09f9a96
+410;<f0><9f><9a><9a>;delivery truck;lexiconjtnpxrpdhrrzhnuqyxsx;-0,1;negative;travel & places;10;2;7;1;f09f9a9a
+411;<f0><9f><9a><9b>;articulated lorry;lexiconzobwsjkhljgbqnntekkx;-0,25;negative;travel & places;8;2;6;0;f09f9a9b
+426;<f0><9f><9a><a1>;aerial tramway;lexiconxbaaiyefvicqrbwqrnsf;-0,5;negative;travel & places;2;1;1;0;f09f9aa1
+436;<f0><9f><95><90>;one o'clock;lexiconuelsydupxedwxlstzygb;-1;negative;travel & places;1;1;0;0;f09f9590
+438;<f0><9f><95><9d>;two-thirty;lexiconypvesfdqhmocayjyhhka;-0,333333333333333;negative;travel & places;3;1;2;0;f09f959d
+440;<f0><9f><95><94>;five o'clock;lexiconjxwckhqcbqsjfuvbbsim;-1;negative;travel & places;1;1;0;0;f09f9594
+441;<f0><9f><95><95>;six o'clock;lexiconcirdiwehwwxuplmnktlb;-1;negative;travel & places;1;1;0;0;f09f9595
+442;<f0><9f><95><a5>;ten-thirty;lexiconpwkphqdgfhcmqnoctzay;-1;negative;travel & places;1;1;0;0;f09f95a5
+474;<f0><9f><92><a7>;droplet;lexiconrruvbfprcxxrlvnqbrjk;-0,170731707317073;negative;travel & places;41;20;8;13;f09f92a7
+495;<e2><9a><be>;baseball;lexiconmctyjdeithikzhbpexkg;-0,0416666666666667;negative;activities;24;9;7;8;e29abe
+501;<f0><9f><8e><b3>;bowling;lexiconvnkrohvqowjclkexgopr;-0,5;negative;activities;2;1;1;0;f09f8eb3
+504;<f0><9f><8e><a3>;fishing pole;lexiconoyfeytdjjpqaqfjaobee;-0,666666666666667;negative;activities;3;2;1;0;f09f8ea3
+521;<f0><9f><93><af>;postal horn;lexiconznjzggdvxnoedjiojsvm;-0,2;negative;objects;5;1;4;0;f09f93af
+523;<f0><9f><94><95>;bell with slash;lexiconpfafokekzawqlmhbaecp;-0,333333333333333;negative;objects;3;2;0;1;f09f9495
+541;<f0><9f><94><8b>;battery;lexiconvxnxauoawlaiyzudjfvk;-0,529411764705882;negative;objects;34;22;8;4;f09f948b
+542;<f0><9f><94><8c>;electric plug;lexiconxgfppjiglzywdzpvcqkn;-0,125;negative;objects;8;3;3;2;f09f948c
+576;<f0><9f><92><b4>;yen banknote;lexicongcylygsrfzlldnbxedie;-0,25;negative;objects;8;3;4;1;f09f92b4
+587;<f0><9f><93><ae>;postbox;lexiconanarxrouysfocsesoaak;-1;negative;objects;1;1;0;0;f09f93ae
+598;<f0><9f><93><8c>;pushpin;lexiconudgmfrbevlxdacfbgsfe;-0,571428571428571;negative;objects;7;5;1;1;f09f938c
+602;<e2><9c><82>;scissors;lexiconwutratpvsmqaefufodho;-0,482758620689655;negative;objects;58;34;18;6;e29c82
+607;<f0><9f><94><a8>;hammer;lexiconlxpachnwxjeuxfuptfyv;-0,125;negative;objects;16;6;6;4;f09f94a8
+608;<f0><9f><94><ab>;pistol;lexiconvteiuefevquusvwoehgm;-0,195364238410596;negative;objects;604;298;126;180;f09f94ab
+609;<f0><9f><94><a7>;wrench;lexiconlhkmglpnsjczvxekshgu;-0,6;negative;objects;5;4;0;1;f09f94a7
+623;<e2><9a><a0>;warning;lexiconcxqjobacfbkigktxdtev;-0,0681818181818182;negative;symbols;88;16;62;10;e29aa0
+625;<f0><9f><9a><ab>;prohibited;lexiconkjyuhkrzasctodjenlqx;-0,454545454545455;negative;symbols;88;48;32;8;f09f9aab
+629;<f0><9f><94><9e>;no one under eighteen;lexiconxykmjizbzrglcidzrati;-0,0434782608695652;negative;symbols;23;6;12;5;f09f949e
+648;<e2><9c><9d>;latin cross;lexiconelpwqxpnkdskqftriiei;-1;negative;symbols;1;1;0;0;e29c9d
+652;<e2><99><88>;Aries;lexiconyldliuimjanuhdbkownr;-1;negative;symbols;1;1;0;0;e29988
+657;<e2><99><8e>;Libra;lexiconhzxyipipbdixfkdbdjll;-0,142857142857143;negative;symbols;7;2;4;1;e2998e
+684;<e2><9d><8e>;cross mark button;lexiconikrjnydbajukjoepvgfl;-1;negative;symbols;3;3;0;0;e29d8e
+686;<e2><9e><96>;heavy minus sign;lexiconzsoovzrruxrcnckkksgd;-1;negative;symbols;2;2;0;0;e29e96
+687;<e2><9e><97>;heavy division sign;lexiconahnurltdcotmandocydx;-0,5;negative;symbols;2;1;1;0;e29e97
+688;<e2><9e><b0>;curly loop;lexiconujamqbnvgpyemyeanfwx;-0,125;negative;symbols;8;4;1;3;e29eb0
+708;<f0><9f><85><be>;O button (blood type);lexiconnjonhsxijkwglrpqfckk;-0,2;negative;symbols;5;2;2;1;f09f85be
+712;<f0><9f><88><82>;Japanese 'service charge' button;lexiconlordvulvafvxqqjvmkcz;-1;negative;symbols;1;1;0;0;f09f8882
+717;<e2><ac><9b>;black large square;lexiconlkxzglxkkbppzxsfshvz;-0,333333333333333;negative;symbols;3;2;0;1;e2ac9b
+733;<f0><9f><9a><a9>;triangular flag;lexiconwiutsdotskrupggpgmhm;-0,285714285714286;negative;flags;7;3;3;1;f09f9aa9

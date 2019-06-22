@@ -1,36 +1,45 @@
 Metadata-Version: 2.1
 Name: TESA
 Version: 0.0.2
-Summary: Simple sentiment analysis of single tweets using opinion lexicons
+Summary: Simple sentiment analysis of single tweets using opinion and emoji lexicons
 Home-page: https://github.com/lukasValentin/T-ESA
 Author: Lukas Graf
 Author-email: graflukas@web.de
 License: UNKNOWN
-Description: # TESA
+Description: ## TESA
         
         This is a short descritpion of how to use the T-ESA (Twitter-Easy Sentiment Analysis)
         package for conducting some sentiment analysis using a lexicon based approach.
         
-        Per **Default** the Hu and Liu lexicon is used (Hu & Liu, 2004; Liu et al., 2005).
+        Per **Default** the Hu and Liu lexicon is used (Hu & Liu, 2004; Liu et al., 2005) for the opinions.
+        In addition, for handling **emojis** the lexicon package (in **R**) based on work of Novak et al. (2015) is utilized. The data
+        can be accessed from this link:
+        https://rdrr.io/cran/lexicon/man/emojis_sentiment.html (see */TESA/lexicon/emojis/ for more details how to data was preprocessed with a R-Script
+        for usage in TESA).
+        
         However, users can also provide other lexicons as text-files (one for positive words
-        and one for negative ones).
+        and one for negative ones) as well as another emoji lexicons (make sure to keep the column names and file structure).
         
         Please see the provided example for more details.
         
         The package works on single tweets that are expected to be provided as string variable.
         It is capable of:
         
-        - cleaning the tweet (stop word and special character removal using a given list)
+        - **`cleaning the tweet`** (stop word and special character removal using a given list)
         
-        - using the Porter-Stemmer or a lemmanization routine (both taken from the nltk package) to ensure better matching betweens the words in the tweets and the lexicon
+        - using the **`Porter-Stemmer`** or a lemmanization routine (both taken from the **nltk** package) to ensure better matching betweens the words in the tweets and the lexicon
         
-        - simple negation handling
+        - simple **`negation handling`**
+        
+        - interpretation of **`emojis`** and their sentiments using the work of Novak et al. (2015) and the **emoji** Python libary
         
         **How to install it:**
         
         run this statement on your command line:
         
+        ```sh{
         pip install -i https://test.pypi.org/simple/ TESA
+        }
         
         or if you want to build from source:
         
@@ -40,13 +49,15 @@ Description: # TESA
         
         - run pip3 install . (or pip3 install -e . to give access to all users of your local machine)
         
+        - in case you do not have administration rights use the --user specification for pip
+        
         
         **How to use it:**
         
-        Some example Python code can be found in the /example directory of the Python package
-        that shows the usage of the API
+        Some example Python code and data can be found in the /Example directory of the Python package
+        that shows the usage of the API.
         
-        As almost mentioned you will have to install the nltk Python package as well.
+        As almost mentioned you will have to install the nltk and emoji Python package as well.
         
         **References**
         
@@ -60,8 +71,10 @@ Description: # TESA
                International World Wide Web conference (WWW-2005), May 10-14, 
                2005, Chiba, Japan.
         
+        Novak, P. K., Smailovic, J., Sluban, B., and Mozetic, I. "Sentiment of emojis."
+               PLoS ONE 10(12). 2015, doi:10.1371/journal.pone.0144296 
+        
         Twitter-Easy Sentiment Analysis
-        >>>>>>> b95fc32a6847cd65140649f93ac196a2eb8cab13
         
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
