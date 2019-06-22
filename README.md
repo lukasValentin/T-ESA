@@ -29,9 +29,9 @@ It is capable of:
 
 run this statement on your command line:
 
-```sh{
+```{bash}
 pip install -i https://test.pypi.org/simple/ TESA
-}```
+```
 
 or if you want to build from source:
 
