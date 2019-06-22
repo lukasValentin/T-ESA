@@ -31,7 +31,7 @@ run this statement on your command line:
 
 ```sh{
 pip install -i https://test.pypi.org/simple/ TESA
-}
+}```
 
 or if you want to build from source:
 
