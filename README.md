@@ -1,5 +1,7 @@
 ## TESA
 
+[![DOI](https://zenodo.org/badge/179812040.svg)](https://zenodo.org/badge/latestdoi/179812040)
+
 This is a short descritpion of how to use the T-ESA (Twitter-Easy Sentiment Analysis)
 package for conducting some sentiment analysis using a lexicon based approach.
 
@@ -67,3 +69,5 @@ Novak, P. K., Smailovic, J., Sluban, B., and Mozetic, I. "Sentiment of emojis."
        PLoS ONE 10(12). 2015, doi:10.1371/journal.pone.0144296 
 
 Twitter-Easy Sentiment Analysis
+-------------------------------
+[![DOI](https://zenodo.org/badge/179812040.svg)](https://zenodo.org/badge/latestdoi/179812040)
