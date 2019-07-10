@@ -15,8 +15,7 @@ setuptools.setup(
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/lukasValentin/T-ESA",
-    packages=setuptools.find_packages(
-            "nltk", "emoji"),
+    packages=setuptools.find_packages(),
     include_package_data=True,
     package_data={'TESA': ['/TESA/lexicon/opinions/*.txt', '/TESA/lexicon/emojis/*.csv']},
     classifiers=[
